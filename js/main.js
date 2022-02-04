@@ -1,5 +1,38 @@
+var index = 0;
+var websites = [];
+const url = 'https://jedi-portofolio.herokuapp.com/websites';
 
-$(window).on("load", function () {
+const load = webpage => {
+    if(!webpage) return;
+
+    $('#iframe-website').html(
+        `
+        <iframe src=${webpage.url} title=${webpage.description} loading="lazy"></iframe>
+        `
+    );
+    
+};
+
+$(window).on("load", async () => {
+
+    try {
+        websites =  ( await axios.get(`${url}`) ).data;
+        load( websites[0] );
+    } catch (error) {
+        console.log(err)
+    }
+
+    $('.fa-arrow-circle-left').on("click", async () => {
+        if (index > 0) --index;
+        else index = websites.length-1;
+        return load( websites[index] );
+    });
+
+    $('.fa-arrow-circle-right').on("click", async () => {
+        if (index < websites.length-1) ++index;
+        else index = 0;
+        return load( websites[index] );
+    });
 
      $('#menu-home-button').click( function () {
         if ($('#pop-up-menu').length === 0) {

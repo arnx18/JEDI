@@ -93,9 +93,15 @@ main {
   color: black;
 }
 
-.contact-me:disabled {
+.contact-me:disabled,
+.iframe-button:disabled {
   filter: saturate(0.2) opacity(0.5);
   cursor: not-allowed;
+}
+
+#iframe-website {
+    background:url(../img/loading.gif) center no-repeat;
+    background-size: 50px;
 }
 
 .form-container {
@@ -168,14 +174,26 @@ iframe {
     width: 100vh;
     box-shadow: rgb(212, 200, 87) 0px 0px 0px 2px;
     border-radius: 18px;
-}    
+}  
 
+.iframe-button {
+    color:rgb(255, 238, 81);
+}
+  
+.iframe-button:not(:disabled):hover,
+.iframe-button:not(:disabled):focus {
+    outline: 0;
+    color: rgb(212, 200, 87);
+    box-shadow: 0 0 0 4px rgba(0,0,0,.2), 0 6px 16px 0 rgba(0,0,0,.15);
+    background: transparent;
+  }
+  
 footer {
     padding-left: 25px;
     padding-right: 25px;
     display: flex;
     justify-content: space-between;
-    height: 10vh;
+    min-height: 10vh;
     background-color: rgb(31, 31, 31);
 }
 
