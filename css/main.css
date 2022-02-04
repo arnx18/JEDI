@@ -6,7 +6,7 @@ body {
     padding: 0;
     background: url('../img/background-image.jpeg') black;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: local; 
     background-size: cover;
 }
 
