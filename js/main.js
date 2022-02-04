@@ -3,7 +3,7 @@ $(window).on("load", function () {
 
      $('#menu-home-button').click( function () {
         if ($('#pop-up-menu').length === 0) {
-             $(this).prepend('<div id="pop-up-menu"><a class="nav-link" href="#">Portfolio</a><a class="nav-link" href="contact.html">Contact</a></div>');
+             $(this).prepend('<div id="pop-up-menu"><a class="nav-link" href="portfolio.html">Portfolio</a><a class="nav-link" href="contact.html">Contact</a></div>');
         } else {
             $('#pop-up-menu').remove();
         }
@@ -11,7 +11,15 @@ $(window).on("load", function () {
 
     $('#menu-contact-button').click( function () {
         if ($('#pop-up-menu').length === 0) {
-             $(this).prepend('<div id="pop-up-menu"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="#">Portfolio</a></div>');
+             $(this).prepend('<div id="pop-up-menu"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="portfolio.html">Portfolio</a></div>');
+        } else {
+            $('#pop-up-menu').remove();
+        }
+    });
+
+    $('#menu-portfolio-button').click( function () {
+        if ($('#pop-up-menu').length === 0) {
+             $(this).prepend('<div id="pop-up-menu"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="contact.html">Contact</a></div>');
         } else {
             $('#pop-up-menu').remove();
         }

@@ -23,22 +23,8 @@ header .nav-link {
     color: rgb(189, 189, 189) !important;
 }
 
-header a:hover, .logo:hover a {
+header a:active {
     transform: scale(0.9);
-}
-
-.logo a {
-    margin-left: 10px;
-    font-size: 18px;
-    color:rgb(189, 189, 189);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-    .navbar-text { display: none; }
 }
 
 main {
@@ -125,7 +111,17 @@ main {
     border-radius: 18px;
 }
 
-.form-container h2 {
+.form-container input {
+    height: 40px;
+}
+
+.form-container textarea {
+    min-height: 100px;
+}
+
+
+.form-container h2, 
+.portfolio-title h2 {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -139,7 +135,9 @@ main {
     width: fit-content;
 } 
 
-.name-wrapper h1:before, .form-container h2:before {
+.name-wrapper h1:before, 
+.form-container h2:before, 
+.portfolio-title h2:before {
     content: '';
     position: absolute;
     left: 0%;
@@ -151,7 +149,9 @@ main {
     margin-bottom: 100px;
 } 
 
-.name-wrapper h1:after, .form-container h2:after {
+.name-wrapper h1:after, 
+.form-container h2:after,  
+.portfolio-title h2:after {
     content: '';
     position: absolute;
     right: 0%;
@@ -162,6 +162,13 @@ main {
     background-color: rgb(212, 200, 87);
     margin-top: 100px;
 } 
+
+iframe {
+    height: 60vh;
+    width: 100vh;
+    box-shadow: rgb(212, 200, 87) 0px 0px 0px 2px;
+    border-radius: 18px;
+}    
 
 footer {
     padding-left: 25px;
