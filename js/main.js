@@ -71,5 +71,23 @@ $(window).on("load", async () => {
             if (!red) $('.alert-wrapper').append('<div id="form-alert-red" class="alert alert-danger text-center d-flex justify-content-center align-items-center" role="alert"><strong>Caution!</strong> All fields required!</div>');
         }          
     });
+
+    $(".progress-circle").each(function() {
+        var value = $(this).attr('data-value');
+        var left = $(this).find('.progress-left .progress-bar');
+        var right = $(this).find('.progress-right .progress-bar');
+        if (value > 0) {
+          if (value <= 50) {
+            right.css('transform', 'rotate(' + value / 100 * 360 + 'deg)')
+          } else {
+            right.css('transform', 'rotate(180deg)')
+            left.css('transform', 'rotate(' + (value - 50) / 100 * 360 + 'deg)')
+          }
+        }
+    })
+
+    $('.skills .progress-bar').css("width", function() {
+        return $(this).attr("aria-valuenow") + "%";
+      })
     
 });
