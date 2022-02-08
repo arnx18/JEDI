@@ -215,7 +215,7 @@ section ul i {
 }
 
 .education-element {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 @media screen and (max-width: 768px) {
@@ -230,7 +230,7 @@ section ul i {
         padding: 5px;
     }
     section h4 {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -379,6 +379,7 @@ section ul i {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    font-weight: 700;
 }
 
 iframe {
@@ -409,11 +410,10 @@ footer {
     background-color: rgb(31, 31, 31);
 }
 
-footer .row {
+footer {
     display: flex;
     align-items: center;
     color: rgb(100, 100, 100);
-    font-size: small;
 }
 
 .social-media {
